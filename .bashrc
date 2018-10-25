@@ -9,7 +9,12 @@ fi
 #PS1='\h:\W \u\$ '
 
 #for git prompt
-export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWDIRTYSTATE=1 # unstaged (*) and staged (+) changes will be shown next to the branch name
+export GIT_PS1_SHOWSTASHSTATE=1 # If something is stashed, then a '$' will be shown next to the branch name
+export GIT_PS1_SHOWUNTRACKEDFILES=1  # appears after branch as %
+export GIT_PS1_SHOWUPSTREAM="auto" # difference between HEAD and its upstream. A "<" indicates you are behind, ">" indicates you are ahead, "<>" indicates you have diverged and "=" indicates that there is no difference.
+export GIT_PS1_SHOWCOLORHINTS=1  # colors are based on the colored output of "git status -sb"
+
 # export PS1='\w$(__git_ps1 " (%s)")\$ '
 
 #color
@@ -30,6 +35,8 @@ shopt -s checkwinsize
 
 ## aliases
 alias ll='ls -lh'
+alias ..='cd ..'
+
 
 #git autocomplete
 source ~/.git-completion.bash
