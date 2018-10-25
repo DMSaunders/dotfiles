@@ -1,0 +1,19 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+export SPARK_HOME=/usr/local/Cellar/apache-spark/2.3.2/libexec
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.1/libexec
+export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native/:$LD_LIBRARY_PATH
+
+# these corresponds to the aws user 'DSaunders' (keys)
+
+#?
+export PATH="~/scripts:$PATH"
